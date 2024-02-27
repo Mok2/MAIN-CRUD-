@@ -1,0 +1,19 @@
+.circle{
+    display:inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+#alert{
+    background-color: #0007;
+    position: fixed;
+   
+    
+}
+#alert .alert-box{
+position: fixed;
+top: calc(50% - 100px);
+}
+.is-invalid,.is-valid{
+    z-index: 5 !important;
+}

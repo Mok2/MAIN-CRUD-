@@ -1,0 +1,117 @@
+*{
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+:root{
+    --page-color:#F5F5F5;
+    --blue-color:#0078FF;
+    --white-color:white;
+}
+.text12::after{
+    content: "";
+    width: 150px;
+    height: 2px;
+    background-color: var(--blue-color);
+    position: absolute;
+    bottom:20px;
+    left: 0%;
+    }
+.bg-page-color{
+    background-color: var(--page-color);
+}
+.bg-img{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+}
+.bg-blend-mode{
+    background-color:var(--blue-color);
+    background-blend-mode: soft-light;
+    opacity: 0.9;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}
+/* navbar */
+.navbar .nav-link ,
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:focus{
+    color: var(--white-color);
+}
+.navbar-nav .nav-link::before{
+    content: "";
+    width: 50%;
+    height: 2px;
+    background-color:var(--white-color) ;
+    position: absolute;
+    left: 10px;
+    bottom:8px;
+    opacity: 0;
+    transform: translateX(-140%);
+    transition: .5s;
+}
+.nav-item:hover .nav-link{
+    color: var(--white-color);
+}
+.nav-item:hover .nav-link::before,
+.nav-item.active .nav-link::before{
+    transform: translateX(0%);
+    opacity: 1;
+}
+.navbar .dropdown-menu a{
+    transition: 0.2s linear;
+}
+.navbar .dropdown-menu a:hover{
+    color: var(--blue-color) !important;
+    }
+/* header */
+#header{
+    padding: 100px 0px!important;
+    background-image: url(../images/images210.jpg);
+}
+#header a{
+    color: white;
+}
+/* section */
+.w-input {
+    width: calc(50% - 2.5px) !important;
+}
+@media screen and (max-width:992px) {
+    .w-input{
+        width: 100% !important;
+    }
+}
+.search-icon{
+    position: absolute;
+    right: -40px;
+    top: 0;
+    height: 44px;
+    width: 40px;
+    background-color: var(--blue-color);
+    padding: rem;
+}
+.data ul li a{
+    transition: 0.2s linear;
+}
+.data ul li::after{
+    content: "";
+    width: 10px;
+    height: 1px;
+    background-color: var(--blue-color);
+    color: var(--blue-color);
+    position: absolute;
+    left:-20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.2s linear;
+}
+.data ul a:hover{
+    color: var(--blue-color) !important;
+}
